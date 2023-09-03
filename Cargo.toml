@@ -15,11 +15,15 @@ repository = "https://github.com/dylanhart/ulid-rs"
 [features]
 default = ["std"]
 std = ["rand"]
+js = ["getrandom", "wasm-timer"]
 
 [dependencies]
 serde = { version = "1.0", optional = true }
 rand = { version = "0.8", optional = true }
 uuid = { version = "1.1", optional = true }
+
+getrandom = { version = "0.2", features = ["js"], optional = true }
+wasm-timer = { version = "0.2", optional = true }
 
 [dev-dependencies]
 bencher = "0.1"

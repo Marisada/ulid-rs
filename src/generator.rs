@@ -1,4 +1,9 @@
-use std::time::{Duration, SystemTime};
+use std::time::Duration;
+
+#[cfg(not(feature = "js"))]
+use std::time::SystemTime;
+#[cfg(feature = "js")]
+use wasm_timer::SystemTime;
 
 use std::fmt;
 
