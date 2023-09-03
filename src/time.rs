@@ -4,7 +4,8 @@ use std::time::Duration;
 #[cfg(not(feature = "js"))]
 use std::time::SystemTime;
 #[cfg(feature = "js")]
-use wasm_timer::SystemTime;
+use web_time::SystemTime;
+
 
 impl Ulid {
     /// Creates a new Ulid with the current time (UTC)

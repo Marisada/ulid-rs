@@ -3,7 +3,7 @@ use std::time::Duration;
 #[cfg(not(feature = "js"))]
 use std::time::SystemTime;
 #[cfg(feature = "js")]
-use wasm_timer::SystemTime;
+use web_time::SystemTime;
 
 use std::fmt;
 
